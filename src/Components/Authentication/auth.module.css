@@ -1,0 +1,148 @@
+.auth_container{
+  background-image: url('../Img/download.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  background-size: cover;
+}
+
+
+.auth_inner_container{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.auth_inner_container >div{
+    width: 50%;
+}
+
+.login_container{
+    background-color: #fff;
+    box-shadow: 8px 12px 12px rgba(158, 158, 158, 0.12);
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.login_container .login,.register_container .join{
+    color: #334767;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.login_container .new_account span,.have_Account span{
+    color: orange;
+    cursor: pointer;
+}
+
+
+.login_container input,.register_container form input{
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    outline: none;
+}
+
+.login_container input:focus{
+    border: 1px solid orange;
+}
+
+.login_container button{
+    border: none;
+    border-radius: 4px;
+    background-color: #516CF0;
+    padding: 12px;
+    color: #fff;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.abt_container{
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.abt_container .title{
+    color: orange;
+    line-height: 40px;
+}
+
+.abt_container .heading{
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.register_container{
+    background-color: #fff;
+    box-shadow: 8px 12px 12px rgba(158, 158, 158, 0.12);
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.names >div{
+    width: 46%;
+    
+}
+.names{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.register_container form button{
+    width: 102%;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #516CF0;
+    margin: 15px 0;
+}
+
+.have_Account{
+    margin-top: 5px;
+}
+
+.paragraph_container{
+    margin-top: 25px;
+}
+
+
+@media(max-width:768px){
+
+    .auth_inner_container >div{
+        width: 100%;
+    }
+
+    .auth_inner_container{
+        flex-direction: column;
+    }
+    
+    .abt_container{
+        display: none;
+    }
+    .names{
+        flex-direction: column;
+    }
+    .names >div{
+        width: 100%;
+        
+    }
+
+}

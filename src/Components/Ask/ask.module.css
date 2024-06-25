@@ -1,0 +1,99 @@
+.ask_inner_container{
+  
+       max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.instruction{
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.instruction_title{
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+
+.instruction ul{
+    line-height: 25px;
+}
+
+
+.form_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form_container form{
+        width: 90%; 
+}
+
+
+.goto_container{
+    text-align: center;
+}
+
+.goto_container >div:nth-of-type(1){
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.goto_container >div:nth-of-type(2){
+    color: orangered;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+.ask_outer_container form textarea{
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: rgb(33,37,41);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    border: 1px solid #DDD;
+    outline: none;
+}
+
+#input{
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: rgb(33,37,41);
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #DDD;
+    outline: none;
+    border-radius: 5px;
+}
+
+.ask_outer_container form button{
+    border: none;
+    background-color: #516CF0;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
