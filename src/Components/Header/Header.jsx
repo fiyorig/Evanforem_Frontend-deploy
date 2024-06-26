@@ -11,7 +11,7 @@ function Header() {
 console.log(user)
    const Logout =()=>{
        localStorage.removeItem('token')
-       window.location.reload()
+      //  window.location.reload()
        navigate('/')
      
    }

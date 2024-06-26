@@ -31,7 +31,7 @@ function Login() {
       localStorage.setItem("token", data.token);
       alert("user successfully log in");
       navigate("/home");
-      window.location.reload()
+      // window.location.reload()
      
     
     } catch (error) {
