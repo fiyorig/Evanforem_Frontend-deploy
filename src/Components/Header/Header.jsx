@@ -8,10 +8,11 @@ import { CiMenuFries } from "react-icons/ci";
 function Header() {
     const navigate = useNavigate()
    const{user}= useContext(AppState)
-
+console.log(user)
    const Logout =()=>{
        localStorage.removeItem('token')
        navigate('/')
+       window.location.reload()
    }
   return (
     <div className={classes.header_container}>
@@ -21,7 +22,7 @@ function Header() {
                  <div className={classes.header_links}>
                       <div onClick={()=>navigate('/home')}>Home</div>
                       <div>How it works</div>
-                      <button onClick={user && Logout}>{!user ?'Log Out':'Sign In'}</button>
+                      <button onClick={user.msg == "valid user" && Logout}>{user.msg == "valid user"?'Log Out':'Sign In'}</button>
                  </div>
            </div>
     </div>

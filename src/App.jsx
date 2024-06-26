@@ -2,9 +2,7 @@ import { Outlet, Route, Routes, useNavigate } from "react-router-dom";
 
 import { createContext, useEffect, useState } from "react";
 import axios from "./axiosConfig";
-import Login from "./Components/Authentication/Login";
 import Auth from "./Components/Authentication/Auth";
-import Register from "./Components/Authentication/Register";
 import Landing from "./Components/Landing/Landing";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
