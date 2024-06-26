@@ -30,8 +30,9 @@ function Login() {
       console.log(data);
       localStorage.setItem("token", data.token);
       alert("user successfully log in");
-      navigate("/home");
       window.location.reload()
+      navigate("/home");
+    
     } catch (error) {
       alert(error.message);
       console.log(error.message);

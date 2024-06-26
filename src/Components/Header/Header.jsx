@@ -11,8 +11,9 @@ function Header() {
 console.log(user)
    const Logout =()=>{
        localStorage.removeItem('token')
-       navigate('/')
        window.location.reload()
+       navigate('/')
+     
    }
   return (
     <div className={classes.header_container}>
