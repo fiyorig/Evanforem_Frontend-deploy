@@ -81,7 +81,7 @@ function Register({setIsLogin}) {
 
               <div><em>I agree to the Privacy Policy and terms of service </em></div>
 
-              <div onClick={()=>setNewUser(true)} className={classes.have_Account}><span>Already have an account ?</span></div>
+              <div onClick={()=>setIsLogin(true)} className={classes.have_Account}><span>Already have an account ?</span></div>
 
           
         </form>
