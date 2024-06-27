@@ -1,13 +1,13 @@
 import React, { useContext, useRef } from "react";
 import classes from "./auth.module.css";
 import axios from "../../axiosConfig";
-import { signState } from "../Context/Context";
+// import { signState } from "../Context/Context";
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+function Login({setIsLogin}) {
   const emailref = useRef(null);
   const passwordref = useRef(null);
-  const { isnewUser, setNewUser } = useContext(signState);
+  // const { isnewUser, setNewUser } = useContext(signState);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -47,7 +47,7 @@ function Login() {
           <div className={classes.login}>Log into your Account</div>
           <div className={classes.new_account}>
             Don't have an account{" "}
-            <span onClick={() => setNewUser(false)}>Create an account</span>
+            <span onClick={() => setIsLogin(false)}>Create an account</span>
           </div>
         </div>
 
@@ -60,7 +60,7 @@ function Login() {
         </div>
 
         <button type="submit">Login</button>
-        <div onClick={() => setNewUser(false)} className={classes.new_account}>
+        <div onClick={() => setIsLogin(false)} className={classes.new_account}>
           <span>Create an account ?</span>
         </div>
       </form>

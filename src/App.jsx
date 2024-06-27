@@ -24,18 +24,20 @@ function App() {
         },
       });
       setuser(data);
+      console.log(data)
       if (!data) {
         navigate("/");
       }
     } catch (error) {
-      setuser(error.response.data);
+      alert(error.response.data);
       navigate("/");
-      console.log(error.response); // Use the navigate function here
+   ; // Use the navigate function here
     }
   }
   useEffect(() => {
-    checkuser();
-  }, []);
+    if(token){ checkuser()}
+   ;
+  }, [token]);
 
   return (
     <AppState.Provider value={{ user, setuser }}>

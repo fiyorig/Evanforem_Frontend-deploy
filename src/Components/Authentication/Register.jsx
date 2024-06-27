@@ -1,16 +1,16 @@
 import React, { useContext, useRef } from 'react'
 import classes from './auth.module.css'
 import axios from '../../axiosConfig'
-import { signState } from '../Context/Context'
+// import { signState } from '../Context/Context'
 
-function Register() {
+function Register({setIsLogin}) {
  
   const firstNameDom = useRef(null)
   const lastNameDom = useRef(null)
   const passwordDom = useRef(null)
   const userNameDom = useRef(null)
   const emailDom = useRef(null)
-  const {setNewUser}=useContext(signState)
+  // const {setNewUser}=useContext(signState)
 
   const handleRegistration =async(e)=>{
      e.preventDefault()
@@ -36,7 +36,7 @@ function Register() {
          })
           alert(info.data.msg)
          console.log(info.data.msg)
-
+         setIsLogin(true)
          return info
      } catch (error) {
          alert(error.message)
@@ -50,7 +50,8 @@ function Register() {
         
         <form action="" onSubmit={handleRegistration}>
             <div className={classes.join}>Join the network</div>
-            <div className={classes.have_Account}>Already have an account ? <span onClick={()=>setNewUser(true)}> Sign In</span></div>
+            {/* <div className={classes.have_Account}>Already have an account ? <span onClick={()=>setNewUser(true)}> Sign In</span></div> */}
+            <div className={classes.have_Account}>Already have an account ? <span onClick={()=>setIsLogin(true)}> Sign In</span></div>
               <div>
                    <input type="email" name="" id="" placeholder='email'  ref={emailDom}/>
               </div>

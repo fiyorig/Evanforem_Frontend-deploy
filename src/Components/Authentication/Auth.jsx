@@ -2,20 +2,21 @@ import React, { useContext, useState } from 'react'
 import classes from './auth.module.css'
 import Login from './Login'
 import Register from './Register'
-import  { signState } from '../Context/Context'
+// import  { signState } from '../Context/Context'
 
 function Auth() {
 
- const{isnewuser,setNewUser} = useContext(signState)
-
+//  const{isnewuser,setNewUser} = useContext(signState)
+const [isLogin, setIsLogin] = useState(true);
   return (
         <div className={classes.auth_container}>
 
           <div className={classes.auth_inner_container}>
                 
-                {
+          {isLogin ? <Login setIsLogin={setIsLogin} /> : <Register setIsLogin={setIsLogin} />}
+                {/* {
                   isnewuser ? <Login />:<Register />
-                }
+                } */}
 
 
                 <div className={classes.abt_container}>

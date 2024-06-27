@@ -1,19 +1,19 @@
 import React, { useContext } from 'react'
 import classes from './header.module.css'
 import Logo from '../Img/B_Logo.png'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import { AppState } from '../../App'
 import { CiMenuFries } from "react-icons/ci";
 
 function Header() {
     const navigate = useNavigate()
-   const{user}= useContext(AppState)
+   const{user,setuser}= useContext(AppState)
 console.log(user)
    const Logout =()=>{
        localStorage.removeItem('token')
-      //  window.location.reload()
+       setuser({})
        navigate('/')
-     
+       window.location.reload()
    }
   return (
     <div className={classes.header_container}>
@@ -23,7 +23,14 @@ console.log(user)
                  <div className={classes.header_links}>
                       <div onClick={()=>navigate('/home')}>Home</div>
                       <div>How it works</div>
-                      <button onClick={user.msg == "valid user" && Logout}>{user.msg == "valid user"?'Log Out':'Sign In'}</button>
+                      {/* {
+                        user || Object.keys(user).length !== 0 ?(
+                          <button onClick={Logout}>signout</button>
+
+                        ):( <button  >signin</button>)
+                      } */}
+                     {!user || Object.keys(user).length === 0 ? ( <Link to="/"> <button>Sign In</button> </Link> ) : ( <Link to="/"> <button onClick={Logout}>Log Out</button> </Link> )}
+                     
                  </div>
            </div>
     </div>
